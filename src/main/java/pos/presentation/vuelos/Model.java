@@ -27,8 +27,8 @@ public class Model extends AbstractModel {
     public Model() {
     }
 
-    public void init(List<Ciudad> list) {
-        this.list = new ArrayList<>();
+    public void init(List<Ciudad> list, List<Vuelo> vuelos) {
+        this.list = vuelos;
         this.current = new Vuelo();
         this.filter = new Vuelo();
         this.ciudades = list;

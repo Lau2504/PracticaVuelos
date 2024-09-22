@@ -26,7 +26,7 @@ public class TableModel extends AbstractTableModel<Vuelo> implements javax.swing
             case DESTINO: return e.getCiudadDestino().getNombre();
             case SALIDA: return e.getHoraSalida();
             case LLEGADA: return e.getHoraLlegada();
-            case DURACION: return e.calcularDuracion(e.getHoraLlegada(), e.getHoraSalida(), e.getCiudadOrigen().getGmt(), e.getCiudadDestino().getGmt());
+            case DURACION: return e.calcularDuracion();
             default: return "";
         }
     }

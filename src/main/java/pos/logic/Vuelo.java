@@ -63,15 +63,15 @@ public class Vuelo {
     public Integer convertirHora(Integer hora, Integer gmt){
         return hora- gmt;
     }
-    public Integer calcularDuracion(Integer horaLlegada, Integer horaSalida, Integer gmtCiudadOrigen, Integer gmtCiudadDestino){
-        Integer horaS = convertirHora(horaSalida, gmtCiudadOrigen);
-        Integer horaL = convertirHora(horaLlegada, gmtCiudadDestino);
+    public Integer calcularDuracion(){
+        Integer horaS = horaSalida-ciudadOrigen.getGmt();
+        Integer horaL = horaLlegada-ciudadDestino.getGmt();
 
-        if(horaLlegada>horaSalida){
-            horaLlegada +=24;
+        if(horaL<horaS){
+            horaL +=24;
         }
 
-        return horaL - horaSalida;
+        return horaL - horaS;
     }
     @Override
     public boolean equals(Object o) {

@@ -57,6 +57,10 @@ public class View implements PropertyChangeListener {
                             controller.save(vuelo);
                             JOptionPane.showMessageDialog(panel, "Datos guardados exitosamente", "",JOptionPane.INFORMATION_MESSAGE);
                             controller.clear();
+                            comboBoxDestino.setSelectedIndex(-1);
+                            comboBoxOrigen.setSelectedIndex(-1);
+                            comboBoxSalida.setSelectedIndex(-1);
+                            comboBoxLlegada.setSelectedIndex(-1);
                         }
                         catch(Exception ex){
                             JOptionPane.showMessageDialog(panel, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -69,6 +73,10 @@ public class View implements PropertyChangeListener {
            @Override
            public void actionPerformed(ActionEvent e) {
                controller.clear();
+               comboBoxDestino.setSelectedIndex(-1);
+               comboBoxOrigen.setSelectedIndex(-1);
+               comboBoxSalida.setSelectedIndex(-1);
+               comboBoxLlegada.setSelectedIndex(-1);
            }
         });
         buscarButton.addActionListener(new ActionListener() {
@@ -79,7 +87,7 @@ public class View implements PropertyChangeListener {
                    Ciudad c1= new Ciudad();
                    c1.setNombre(ciudadTextF.getText());
                    filter.setCiudadDestino(c1);
-                   filter.setCiudadDestino(c1);
+                   filter.setCiudadOrigen(c1);
                    controller.search(filter);
                }
                catch(Exception ex){

@@ -21,7 +21,7 @@ public class Controller {
         this.model = model;
 
 
-        this.model.init(Service.instance().getCiudades());//recibe una lista?
+        this.model.init(Service.instance().getCiudades(), Service.instance().getVuelos());//recibe una lista?
         for ( Ciudad cat : model.getCiudades() ) {
         System.out.println(cat.getNombre()+"  "+ cat.getGmt()+"  "+ cat.getId());
     }

@@ -36,6 +36,9 @@ public class Service {
    public List<Ciudad> getCiudades(){
         return data.getCiudades();
    }
+   public List<Vuelo> getVuelos(){
+        return data.getVuelos();
+   }
 
 //================= VUELOS ============
 
