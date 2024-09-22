@@ -140,7 +140,7 @@ public class View implements PropertyChangeListener {
     public Vuelo take(){
         try{
             Vuelo vuelo = new Vuelo();
-            vuelo.setNumero(Double.parseDouble(numeroTextF.getText()));
+            vuelo.setNumero(numeroTextF.getText());
             vuelo.setCiudadDestino((Ciudad) comboBoxDestino.getSelectedItem());
             vuelo.setCiudadOrigen( (Ciudad) comboBoxOrigen.getSelectedItem());
             vuelo.setHoraLlegada(Integer.parseInt((String) comboBoxLlegada.getSelectedItem()));

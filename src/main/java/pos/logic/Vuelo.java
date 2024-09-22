@@ -3,7 +3,7 @@ package pos.logic;
 import java.util.Objects;
 
 public class Vuelo {
-    private Double numero; //si falla esto en el archivo cambiarlo a String
+    private String numero; //si falla esto en el archivo cambiarlo a String
     private Ciudad ciudadOrigen;
     private Ciudad ciudadDestino;
     private Integer horaSalida;
@@ -17,9 +17,9 @@ public class Vuelo {
         this.ciudadOrigen = ciudadOrigen;
     }
 
-    public Vuelo() {this(0.0, null, null, 0, 0);}
+    public Vuelo() {this("", new Ciudad(), new Ciudad(), 0, 0);}
 
-    public Vuelo(Double numero, Ciudad ciudadOrigen, Ciudad ciudadDestino, Integer horaSalida, Integer horaLlegada) {
+    public Vuelo(String numero, Ciudad ciudadOrigen, Ciudad ciudadDestino, Integer horaSalida, Integer horaLlegada) {
         this.numero = numero;
         this.ciudadOrigen = ciudadOrigen;
         this.ciudadDestino = ciudadDestino;
@@ -27,11 +27,11 @@ public class Vuelo {
         this.horaLlegada = horaLlegada;
     }
 
-    public Double getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(Double numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 

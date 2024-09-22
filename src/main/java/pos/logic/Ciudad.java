@@ -45,7 +45,7 @@ public class Ciudad {
     private String nombre;
     private Integer gmt;
     public Ciudad() {
-
+    this(" "," ",0);
     }
     public Ciudad(String id, String nombre, Integer gmt) {
         this.id = id;
@@ -56,5 +56,5 @@ public class Ciudad {
 
 
     @Override
-    public String toString() { return nombre; }
+    public String toString() { return nombre+ " "+ gmt; }
 }

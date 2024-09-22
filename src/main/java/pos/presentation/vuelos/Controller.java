@@ -22,12 +22,13 @@ public class Controller {
 
 
         this.model.init(Service.instance().getCiudades());//recibe una lista?
+        for ( Ciudad cat : model.getCiudades() ) {
+        System.out.println(cat.getNombre()+"  "+ cat.getGmt()+"  "+ cat.getId());
+    }
         view.setController(this);
         view.setModel(this.model);
         this.model.setCiudades(Service.instance().getCiudades());
-        for ( Ciudad cat : model.getCiudades() ) {
-            System.out.println(cat.getNombre());
-        }
+
     }
 
 
